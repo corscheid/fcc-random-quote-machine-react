@@ -1,16 +1,5 @@
 import React from "react";
-
-const QuoteBox = (props) => {
-  return (
-    <div id="quote-box">
-      <h1 id="text">
-        <i className="fa fa-quote-left"></i> {props.quote}
-      </h1>
-      <p id="author">- {props.author}</p>
-      {props.children}
-    </div>
-  );
-};
+import QuoteBox from "./components/QuoteBox";
 
 const App = () => {
   const [loading, setLoading] = React.useState(true);
