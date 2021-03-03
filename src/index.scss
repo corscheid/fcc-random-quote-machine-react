@@ -1,17 +1,19 @@
+/* Bootstrap 5 */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css");
+/* Font Awesome */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+/* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Amiri&family=Indie+Flower&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
 
-/* colors */
-$white: #fafafa;
 $blue: #58f;
-$black: #3f3f3f;
 
 html,
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 #root {
@@ -19,30 +21,6 @@ body {
   justify-content: center;
   align-items: center;
   background-color: $blue;
-  height: 100vh;
-}
-
-#quote-box {
-  padding: 2em;
-  background-color: $white;
-  margin: 20%;
-  border-radius: 10px;
-  color: $black;
-
-  #text {
-    font-family: "Amiri", serif;
-  }
-  #author {
-    font-family: "Neucha", cursive;
-    font-size: 2.5em;
-  }
-  .btn-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-
-    #tweet-quote {
-      margin-left: 1em;
-    }
-  }
+  height: 100%;
+  overflow-y: hidden;
 }
