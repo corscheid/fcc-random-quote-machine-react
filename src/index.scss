@@ -1,13 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri&family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
+
+/* colors */
+$white: #fafafa;
+$blue: #58f;
+$black: #3f3f3f;
+
+html,
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue;
+  height: 100vh;
+}
+
+#quote-box {
+  padding: 2em;
+  background-color: $white;
+  margin: 20%;
+  border-radius: 10px;
+  color: $black;
+
+  #text {
+    font-family: "Amiri", serif;
+  }
+  #author {
+    font-family: "Neucha", cursive;
+    font-size: 2.5em;
+  }
+  .btn-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    #tweet-quote {
+      margin-left: 1em;
+    }
+  }
 }
