@@ -28,7 +28,7 @@ const App = () => {
   }, []);
 
   if (loading) {
-    return <div>loading...</div>;
+    return <div id="#loading">loading...</div>;
   } else {
     const tweetURL = `https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${quote.quote} --${quote.author}`;
     return (
