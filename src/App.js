@@ -6,6 +6,7 @@ const App = () => {
   const [loading, setLoading] = React.useState(true);
   const [quote, setQuote] = React.useState({});
   const [quoteList, setQuoteList] = React.useState([]);
+  const [tweetURL, setTweetURL] = React.useState("");
 
   const getNewQuote = () => {
     const idx = Math.floor(Math.random() * quoteList.length);
@@ -22,6 +23,9 @@ const App = () => {
     const newQuote = quotes.quotes[idx];
     setQuoteList(quotes.quotes);
     setQuote(newQuote);
+    setTweetURL(
+      `https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${newQuote.quote} --${newQuote.author}`
+    );
     setLoading(false);
   };
 
@@ -36,7 +40,6 @@ const App = () => {
       </div>
     );
   } else {
-    const tweetURL = `https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${quote.quote} --${quote.author}`;
     return (
       <QuoteBox quote={quote.quote} author={quote.author}>
         <div className="btn-row">
@@ -53,7 +56,8 @@ const App = () => {
             target="_top"
             className="btn btn-secondary"
           >
-            <i className="fa fa-twitter"></i> Tweet
+            <i className="fa fa-twitter"></i>
+            Tweet
           </a>
         </div>
       </QuoteBox>
