@@ -1,3 +1,5 @@
+import "./QuoteBox.scss";
+
 const QuoteBox = (props) => {
   return (
     <div id="quote-box">
