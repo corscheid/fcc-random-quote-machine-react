@@ -1,5 +1,6 @@
 import React from "react";
 import QuoteBox from "./components/QuoteBox";
+import "./App.scss";
 
 const App = () => {
   const [loading, setLoading] = React.useState(true);
@@ -28,7 +29,11 @@ const App = () => {
   }, []);
 
   if (loading) {
-    return <div id="#loading">loading...</div>;
+    return (
+      <div id="loading">
+        <h1>loading...</h1>
+      </div>
+    );
   } else {
     const tweetURL = `https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${quote.quote} --${quote.author}`;
     return (
