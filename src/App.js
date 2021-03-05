@@ -33,36 +33,18 @@ const App = () => {
     fetchData();
   }, []);
 
-  if (loading) {
-    return (
-      <div id="loading">
-        <h1>loading...</h1>
-      </div>
-    );
-  } else {
-    return (
-      <QuoteBox quote={quote.quote} author={quote.author}>
-        <div className="btn-row">
-          <button
-            className="btn btn-primary"
-            id="new-quote"
-            onClick={getNewQuote}
-          >
-            New quote
-          </button>
-          <a
-            id="tweet-quote"
-            href={tweetURL}
-            target="_top"
-            className="btn btn-secondary"
-          >
-            <i className="fa fa-twitter"></i>
-            Tweet
-          </a>
-        </div>
-      </QuoteBox>
-    );
-  }
+  return loading ? (
+    <div id="loading">
+      <h1>loading...</h1>
+    </div>
+  ) : (
+    <QuoteBox
+      quote={quote.quote}
+      author={quote.author}
+      getNewQuote={getNewQuote}
+      tweetURL={tweetURL}
+    />
+  );
 };
 
 export default App;
