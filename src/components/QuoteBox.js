@@ -21,8 +21,7 @@ const QuoteBox = (props) => {
           target="_top"
           className="btn btn-secondary"
         >
-          <i className="fa fa-twitter"></i>
-          Tweet
+          <i className="fa fa-twitter"></i> Tweet
         </a>
       </div>
     </div>
